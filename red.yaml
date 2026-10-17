@@ -1,0 +1,141 @@
+# Hermes skin — Cyberpunk (Vermelho)
+# Neon-vermelho cyberpunk terminal over near-black: the same palette family as the
+# desktop/dashboard "cyberpunk" theme (neon green #00ff41 on #000a00), re-hued to
+# vermelho.
+#
+# Activate:  hermes config set display.skin red
+# One color: hermes skin set ui_tool "#ff7070"
+# Revert:    hermes config set display.skin default
+
+name: red
+description: Cyberpunk vermelho — neon vermelho sobre preto
+
+colors:
+  # ── Canvas ────────────────────────────────────────────────────────────────
+  # `background` is deliberately NOT authored: a skin that sets it makes the TUI
+  # paint the terminal (OSC-11) opaque, which kills terminal transparency. Without
+  # it every surface renders on the user's own (possibly translucent) terminal and
+  # the polarity comes from host detection — exactly what the built-in `default`
+  # skin does. The desktop GUI still gets a dark canvas from status_bar_bg.
+
+  # ── Identity: neon red accent ───────────────────────────────────────────
+  # ui_accent colors the tool marker, headings, links and chevrons.
+  ui_accent: "#ff7070"
+  banner_accent: "#ff7070"
+  ui_primary: "#ff7070"
+  banner_title: "#ff7070"
+
+  # ── Text ladder, brightest to dimmest ─────────────────────────────────────
+  ui_text: "#ffd9d8"
+  banner_text: "#ffd9d8"
+  ui_label: "#c07768"
+  ui_thinking: "#9e6064"
+  banner_dim: "#9e6064"
+
+  # ── Rules and borders ─────────────────────────────────────────────────────
+  banner_border: "#773a3d"
+  ui_border: "#773a3d"
+  input_rule: "#8b4741"
+  response_border: "#ff7070"
+  session_border: "#824447"
+
+  # ── Element tokens ────────────────────────────────────────────────────────
+  # The tool bullet — the ● in front of every tool/task line — follows the
+  # identity accent (same rule as the built-in `default` skin). The secondary hue
+  # (#00e5ff) marks machine text instead: shell prompts and code keywords.
+  ui_tool: "#ff7070"
+  shell_dollar: "#00e5ff"
+  prompt: "#ff7070"
+
+  # ── Semantic status ───────────────────────────────────────────────────────
+  # ok follows the identity (it paints the footer's "ready" state and the ✓/✔
+  # success marks); warn/error stay semantic (amber/red) on purpose so the
+  # 50/80/95% escalation of the context read-out still reads as a warning.
+  ui_ok: "#ff7070"
+  ui_warn: "#ffc400"
+  ui_error: "#ff2d55"
+
+  # ── Status bar ────────────────────────────────────────────────────────────
+  status_bar_bg: "#140408"
+  status_bar_text: "#e8bbbb"
+  status_bar_strong: "#ff7070"
+  status_bar_dim: "#9e6064"
+  status_bar_good: "#ff7070"
+  status_bar_warn: "#ffc400"
+  status_bar_bad: "#ff8c1a"
+  status_bar_critical: "#ff0055"
+  session_label: "#c07768"
+  voice_status_bg: "#140408"
+
+  # ── Completion menu ───────────────────────────────────────────────────────
+  completion_menu_bg: "#18050a"
+  completion_menu_current_bg: "#59211b"
+  completion_menu_meta_bg: "#120407"
+  completion_menu_meta_current_bg: "#893834"
+  selection_bg: "#59211b"
+
+  # ── Code syntax ───────────────────────────────────────────────────────────
+  syntax_string: "#eaafa7"
+  syntax_number: "#ffc400"
+  syntax_keyword: "#00e5ff"
+  syntax_comment: "#915054"
+
+  # ── Diffs ─────────────────────────────────────────────────────────────────
+  diff_added: "#b56050"
+  diff_removed: "#ff1f8f"
+  diff_added_word: "#d3938e"
+  diff_removed_word: "#ff5bad"
+
+# Spinner: a pulsing block plus netrunner verbs.
+spinner:
+  waiting_faces: ["(░)", "(▒)", "(▓)", "(█)", "(▓)"]
+  thinking_faces: ["(▓)", "(▒)", "(░)", "(▚)", "(▞)"]
+  thinking_verbs:
+    - "jacking in"
+    - "decrypting the payload"
+    - "spoofing the trace"
+    - "compiling ice"
+    - "reading the datastream"
+    - "splicing the net"
+    - "burning chrome"
+    - "ghosting the mainframe"
+  wings:
+    - ["⟪░", "▒⟫"]
+    - ["⟪▒", "▓⟫"]
+    - ["⟪▓", "█⟫"]
+    - ["⟪▚", "▞⟫"]
+
+# Flavor. agent_name / response_label stay Hermes' own.
+branding:
+  welcome: "Neural link online. Type your message or /help for commands."
+  goodbye: "Jacked out. ▌"
+  prompt_symbol: "▌"
+  help_header: "(⌁) Available Commands"
+
+# Tool-line gutter.
+tool_prefix: "▌"
+
+# The shipped Hermes art, recolored to the neon ladder (logo prints at >=95 cols).
+banner_logo: |-
+  [bold #ff7070]██╗  ██╗███████╗██████╗ ███╗   ███╗███████╗███████╗       █████╗  ██████╗ ███████╗███╗   ██╗████████╗[/]
+  [bold #ff7070]██║  ██║██╔════╝██╔══██╗████╗ ████║██╔════╝██╔════╝      ██╔══██╗██╔════╝ ██╔════╝████╗  ██║╚══██╔══╝[/]
+  [#d34544]███████║█████╗  ██████╔╝██╔████╔██║█████╗  ███████╗█████╗███████║██║  ███╗█████╗  ██╔██╗ ██║   ██║[/]
+  [#d34544]██╔══██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══╝  ╚════██║╚════╝██╔══██║██║   ██║██╔══╝  ██║╚██╗██║   ██║[/]
+  [#773a3d]██║  ██║███████╗██║  ██║██║ ╚═╝ ██║███████╗███████║      ██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║[/]
+  [#773a3d]╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝      ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝[/]
+banner_hero: |-
+  [#824447]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠀⣀⣀⠀⢀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#824447]⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣇⠸⣿⣿⠇⣸⣿⣿⣷⣦⣄⡀⠀⠀⠀⠀⠀⠀[/]
+  [#d34544]⠀⢀⣠⣴⣶⠿⠋⣩⡿⣿⡿⠻⣿⡇⢠⡄⢸⣿⠟⢿⣿⢿⣍⠙⠿⣶⣦⣄⡀⠀[/]
+  [#d34544]⠀⠀⠉⠉⠁⠶⠟⠋⠀⠉⠀⢀⣈⣁⡈⢁⣈⣁⡀⠀⠉⠀⠙⠻⠶⠈⠉⠉⠀⠀[/]
+  [#ff7070]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⡿⠛⢁⡈⠛⢿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#ff7070]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⣿⣦⣤⣈⠁⢠⣴⣿⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#d34544]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠻⢿⣿⣦⡉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#d34544]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢷⣦⣈⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#824447]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣴⠦⠈⠙⠿⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#824447]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣤⡈⠁⢤⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#773a3d]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠷⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#773a3d]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠑⢶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#773a3d]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠁⢰⡆⠈⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#773a3d]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⠈⣡⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#773a3d]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
