@@ -1,0 +1,82 @@
+# Neon Yellow
+
+name: yellow
+description: neon yellow
+
+colors:
+  ui_accent: "#ffee00"
+  banner_accent: "#ffee00"
+  ui_primary: "#ffee00"
+  banner_title: "#ffee00"
+
+  ui_text: "#fffcb9"
+  banner_text: "#fffcb9"
+  ui_label: "#c5db27"
+  ui_thinking: "#a59633"
+  banner_dim: "#a59633"
+
+  banner_border: "#6f640d"
+  ui_border: "#6f640d"
+  input_rule: "#7a7c00"
+  response_border: "#ffee00"
+  session_border: "#7f7413"
+
+  ui_tool: "#ffee00"
+  shell_dollar: "#ffee00"
+  prompt: "#ffee00"
+
+  ui_ok: "#ffee00"
+  ui_warn: "#ffab00"
+  ui_error: "#ff2d55"
+
+  status_bar_bg: "#140e00"
+  status_bar_text: "#fffdcb"
+  status_bar_strong: "#ffee00"
+  status_bar_dim: "#a59633"
+  status_bar_good: "#ffee00"
+  status_bar_warn: "#ffab00"
+  status_bar_bad: "#ff6a00"
+  status_bar_critical: "#ff0055"
+  session_label: "#c5db27"
+  voice_status_bg: "#140e00"
+
+  completion_menu_bg: "#181000"
+  completion_menu_current_bg: "#575900"
+  completion_menu_meta_bg: "#120c00"
+  completion_menu_meta_current_bg: "#787500"
+  selection_bg: "#575900"
+
+  syntax_string: "#f4fc7c"
+  syntax_number: "#ffee00"
+  syntax_keyword: "#00e5ff"
+  syntax_comment: "#90831e"
+
+  diff_added: "#b0c300"
+  diff_removed: "#ff3b5c"
+  diff_added_word: "#f6f968"
+  diff_removed_word: "#ff6b8a"
+
+banner_logo: |-
+  [bold #ffee00]██╗  ██╗███████╗██████╗ ███╗   ███╗███████╗███████╗       █████╗  ██████╗ ███████╗███╗   ██╗████████╗[/]
+  [bold #ffee00]██║  ██║██╔════╝██╔══██╗████╗ ████║██╔════╝██╔════╝      ██╔══██╗██╔════╝ ██╔════╝████╗  ██║╚══██╔══╝[/]
+  [#c7bb00]███████║█████╗  ██████╔╝██╔████╔██║█████╗  ███████╗█████╗███████║██║  ███╗█████╗  ██╔██╗ ██║   ██║[/]
+  [#c7bb00]██╔══██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══╝  ╚════██║╚════╝██╔══██║██║   ██║██╔══╝  ██║╚██╗██║   ██║[/]
+  [#6f640d]██║  ██║███████╗██║  ██║██║ ╚═╝ ██║███████╗███████║      ██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║[/]
+  [#6f640d]╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝      ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝[/]
+
+banner_hero: |-
+  [#7f7413]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠀⣀⣀⠀⢀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#7f7413]⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣇⠸⣿⣿⠇⣸⣿⣿⣷⣦⣄⡀⠀⠀⠀⠀⠀⠀[/]
+  [#c7bb00]⠀⢀⣠⣴⣶⠿⠋⣩⡿⣿⡿⠻⣿⡇⢠⡄⢸⣿⠟⢿⣿⢿⣍⠙⠿⣶⣦⣄⡀⠀[/]
+  [#c7bb00]⠀⠀⠉⠉⠁⠶⠟⠋⠀⠉⠀⢀⣈⣁⡈⢁⣈⣁⡀⠀⠉⠀⠙⠻⠶⠈⠉⠉⠀⠀[/]
+  [#ffee00]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⡿⠛⢁⡈⠛⢿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#ffee00]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⣿⣦⣤⣈⠁⢠⣴⣿⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#c7bb00]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠻⢿⣿⣦⡉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#c7bb00]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢷⣦⣈⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#7f7413]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣴⠦⠈⠙⠿⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#7f7413]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣤⡈⠁⢤⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#6f640d]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠷⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#6f640d]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠑⢶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#6f640d]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠁⢰⡆⠈⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#6f640d]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⠈⣡⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#6f640d]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
